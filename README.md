@@ -1,44 +1,22 @@
-# A0: Build a Linear Regression model
+# MLOps Coursework Repository
 
-## Summary
-This project implements **Linear Regression**, **Ridge Regression**, and **LASSO Regression** using Python. The main goal was to understand the process of building a basic ML model. We broke down the process of implementing Linear Regression in Python using a simple dataset known as **Boston Housing**, step by step.
+This repository contains a series of assignments (**A0–A2**, with **A3–A4** planned) that progressively build a complete **MLOps workflow** — from model development to deployment, versioning, and monitoring.
 
-The notebook includes:
-- Data preprocessing and normalization  
-- Manual implementation of cost and gradient functions  
-- Batch Gradient Descent  
-- Ridge (L2) and LASSO (L1) regularization  
-- Model evaluation using Mean Squared Error (MSE)  
-- Visual interpretation of feature importance  
-
----
-
-## Collaboration
-- **Daniel Tseng**  
-- **Chia-En Wu**
-
-During this assignment, I discussed the math equations and implementation details with **Daniel Tseng** and **Chia-En Wu**.  
-We helped each other understand the formulas and debug whenever we got stuck or came up with some crazy answers.
+| Assignment | Core Topic | Description |
+|-------------|-------------|-------------|
+| **A0** | Linear, Ridge & LASSO Regression | Implemented from scratch using Python on the Boston Housing dataset. Covered gradient descent, cost function derivation, normalization, and regularization. |
+| **A1** | Model Deployment with FastAPI & AWS | Containerized the trained LASSO model using Docker and deployed it to AWS ECS (Fargate) via GitHub Actions CI/CD pipeline, exposing a `/predict` REST API. |
+| **A2** | Versioned Model Serving with MLflow | Integrated MLflow Model Registry into FastAPI to enable versioned model management and metadata-aware inference, supporting dynamic model selection. |
+| **A3 (Upcoming)** |  |
+| **A4 (Upcoming)** |  |
 
 ---
 
-## Reflections
+### Repository Overview
+This repo demonstrates the **end-to-end MLOps pipeline** — from data preprocessing and model training to automated deployment and versioned serving.
 
-### What Was Easy
-- Loading and splitting the dataset  
-- Writing the visualization parts (cost curve, scatter plot, and bar chart)  
-- Understanding the effect of normalization and regularization intuitively  
+### Tech Stack
+Python • FastAPI • Docker • AWS ECS/Fargate • GitHub Actions • MLflow • pytest
 
-### What Was Hard
-- Deriving the **gradients** for weight and bias from the cost function —  
-  I struggled to fully understand how the mathematical formula translates into code,  
-  especially when updating `w` and `b` during gradient descent. Also, my gradient descent didn’t converge correctly because of a misunderstanding in the **partial derivatives**.  
-  It took several print checks and visual plots to confirm the updates were working as expected.  
-
----
-
-## Resources Used
-- Class materials and lecture notes  
-- ChatGPT (for debugging and conceptual clarification)
-
----
+### Objective
+> To build a reproducible, modular, and scalable MLOps workflow that bridges machine learning and production infrastructure.
